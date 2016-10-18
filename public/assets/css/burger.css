@@ -1,0 +1,7 @@
+.newBurger {
+	color: green;
+}
+
+.newBurger:hover {
+	color: :#c4c4c4;
+};

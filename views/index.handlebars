@@ -1,0 +1,59 @@
+
+<!-- list burgers -->
+<!-- <ul>
+  {{#each burger}}
+    {{#unless this.devoured}}
+      <li>
+        {{this.burger_name}}	
+      </li>
+    {{/unless}}
+  {{/each}}
+</ul> -->
+
+<!-- if devoured -->
+<!-- {{#if this.devoured}}
+	<div class='panel panel-default'>
+		<div class='panel-body'>
+			{{this.burger_name}}
+		</div>
+	</div>
+{{/if}} -->
+
+<!-- html build -->
+
+			<div class='col-sm-6' id='burgers'>
+				<div class='panel panel-primary text-center'>
+					<div class='panel-heading'>
+					<strong>Ordered Burgers</strong>
+					</div>
+					<div id='burgers' class='panel-body'>
+						{{#each burger}}
+							{{#unless this.devoured}}
+								<div class='panel panel-default '>
+									<div class='panel-body'>
+										{{this.burger_name}}
+									</div>
+								</div>
+							{{/unless}}
+						{{/each}}
+					</div>
+				</div>
+			</div>
+			<div class='col-sm-6' id='eaten'>
+				<div class='panel panel-primary text-center'>
+					<div class='panel-heading'>
+					<strong>Eaten Burgers</strong>
+					</div>
+					<div id='consumed' class='panel-body'>
+						{{#each burger}}	
+							{{#if this.devoured}}
+								<div class='panel panel-default'>
+									<div class='panel-body'>
+										{{this.burger_name}}
+									</div>
+								</div>
+							{{/if}}
+						{{/each}}
+					</div>
+				</div>				
+			</div>
